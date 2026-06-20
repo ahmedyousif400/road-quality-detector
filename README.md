@@ -1,14 +1,14 @@
 # Road Quality Detector - Random Forest Classifier
 
-## 📋 Overview
+## Overview
 This project implements a **Random Forest Classifier** to detect and classify road quality conditions. The model analyzes road surface characteristics and predicts quality levels (e.g., Good, Fair, Poor) to help with infrastructure maintenance and planning.
 
-## 🎯 Project Objective
+## Project Objective
 - Classify road conditions based on various surface features
 - Provide automated road quality assessment for maintenance prioritization
 - Use ensemble learning for robust and accurate predictions
 
-## 📊 Dataset
+## Dataset
 The model is trained on road surface data with features such as:
 - **Pavement Condition Index (PCI)**
 - **Roughness measurements**
@@ -21,7 +21,7 @@ The model is trained on road surface data with features such as:
 **Dataset Shape:** [Specify your dataset dimensions]  
 **Target Variable:** Road Quality (Classes: Good/Fair/Poor or similar)
 
-## 🛠️ Requirements
+## Requirements
 ```python
 # Core Libraries
 pandas>=1.3.0
@@ -40,7 +40,7 @@ plotly>=5.0.0
 pip install -r requirements.txt
 ```
 
-## 📂 Project Structure
+## Project Structure
 ```
 road-quality-detector/
 ├── data/
@@ -60,7 +60,7 @@ road-quality-detector/
 └── requirements.txt
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. **Data Exploration**
 Open `notebooks/01_data_exploration.ipynb` to:
@@ -90,7 +90,7 @@ Run `notebooks/04_model_evaluation.ipynb` to:
 - Calculate precision, recall, F1-score
 - Visualize feature importance
 
-## 📈 Model Performance
+## Model Performance
 
 | Metric | Value |
 |--------|-------|
@@ -108,34 +108,34 @@ Run `notebooks/04_model_evaluation.ipynb` to:
 5. [Feature Name] - X%
 ```
 
-## 🤖 Random Forest Classifier Details
+## Random Forest Classifier Details
 
 **Hyperparameters Used:**
 ```python
 RandomForestClassifier(
     n_estimators=100,           # Number of trees
-    max_depth=15,               # Maximum tree depth
-    min_samples_split=5,        # Minimum samples for split
-    min_samples_leaf=2,         # Minimum samples per leaf
+    max_depth=10,               # Maximum tree depth
+    min_samples_split=20,        # Minimum samples for split
+    min_samples_leaf=10,         # Minimum samples per leaf
     random_state=42,            # For reproducibility
     n_jobs=-1                   # Parallel processing
 )
 ```
 
 **Why Random Forest?**
-- ✅ Handles both categorical and numerical features
-- ✅ Robust to outliers and missing values
-- ✅ Provides feature importance rankings
-- ✅ Reduces overfitting through ensemble approach
-- ✅ Fast inference time for real-time predictions
+-  Handles both categorical and numerical features
+-  Robust to outliers and missing values
+-  Provides feature importance rankings
+-  Reduces overfitting through ensemble approach
+-  Fast inference time for real-time predictions
 
-## 📊 Key Insights
+## Key Insights
 
 - **Feature Importance:** [Describe which features matter most]
 - **Model Strengths:** [List model advantages for your use case]
 - **Limitations:** [Mention any constraints or areas for improvement]
 
-## 🔧 Making Predictions
+## Making Predictions
 
 ```python
 import pickle
@@ -160,22 +160,21 @@ print(f"Predicted Road Quality: {prediction[0]}")
 print(f"Confidence: {max(prediction_proba[0]) * 100:.2f}%")
 ```
 
-## 📚 Jupyter Notebook Best Practices Used
+## Jupyter Notebook Best Practices Used
 
-- ✅ Clear cell documentation with markdown
-- ✅ Step-by-step data processing pipeline
-- ✅ Visualizations at each stage
-- ✅ Model training with progress tracking
-- ✅ Comprehensive evaluation metrics
-- ✅ Reproducible code with seed values
+-  Clear cell documentation with markdown
+-  Step-by-step data processing pipeline
+-  Visualizations at each stage
+-  Model training with progress tracking
+-  Comprehensive evaluation metrics
+-  Reproducible code with seed values
 
-## 🔍 Model Validation
+## Model Validation
 
 - **Cross-Validation:** K-Fold cross-validation (k=5) used for robust evaluation
 - **Train-Test Split:** 80% training, 20% testing
-- **Class Balance:** [Describe how you handled imbalanced classes, if applicable]
 
-## 💡 Future Improvements
+## Future Improvements
 
 - [ ] Integrate additional road condition sensors
 - [ ] Implement deep learning approaches for comparison
@@ -183,23 +182,22 @@ print(f"Confidence: {max(prediction_proba[0]) * 100:.2f}%")
 - [ ] Add real-time prediction capability
 - [ ] Collect more diverse road condition data
 
-## 📝 Notes for Submission
+## Notes for Submission
 
 - All notebooks are self-contained and can be run independently
 - Ensure `data/` folder contains your dataset before running
 - Model training may take a few minutes depending on dataset size
 - Results are saved to `results/` folder for reference
 
-## 👨‍💼 Author
-**[Your Name]**  
+## Author
+**Ahmed Yousif Saadeldeen**  
 College Assignment - Road Quality Detection  
-Date: [Submission Date]
+Date: 6/20/2026
 
-## 📄 License
-This project is for educational purposes.
+## License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
 
-## 📞 Questions?
-For any questions about the implementation, refer to the inline comments in the Jupyter notebooks.
+You may copy, distribute, and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build and install instructions. See the LICENSE file for more details.
 
 ---
 
